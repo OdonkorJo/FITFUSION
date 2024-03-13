@@ -43,21 +43,39 @@ function testid(){
             foreach($rows as $row){
                 $work_num = $row['WorkoutGoalID'];
             }
-            $recom_qry = "SELECT `exercisename` FROM `recommendations` WHERE `WorkoutGoalID` = $work_num";
+            $recom_qry = "SELECT * FROM `recommendations` WHERE `WorkoutGoalID` = $work_num";
             $result = $con->query($recom_qry);
            
             
             if ($result) {
                 $all = $result->fetch_all(MYSQLI_ASSOC);
+                echo "<div class='container'>";
                 foreach($all as $row){
-                    echo "<button class='goal-button'>". $row['exercisename']. "</button> <br>";
-
+                    echo "<div class ='cat'>";
+                        echo"<label>";
+                            echo "<input type='checkbox' class='goal-button' value='".$row['exerciseID']."'>";
+                            echo "<span>" . $row['exercisename']. "</span> <br>"; 
+                        echo "</label>";
+                    echo "</div>"; 
+            }
+                echo "</div>";
             } 
+
+
+
             echo "<br><br><br>";
             $all = getallrecommendations($con);
+            echo "<div class='container'>";
             foreach($all as $row){
-                echo "<button  class='goal-button '>". $row['exercisename']. "</button> <br>";    
-        }}}}}
+                echo "<div class ='cat'>";
+                    echo"<label>";
+                        echo "<input type='checkbox' class='goal-button' value='".$row['exerciseID']."'>";
+                        echo "<span>" . $row['exercisename']. "</span> <br>"; 
+                    echo "</label>";
+                echo "</div>"; 
+        }
+            echo "</div>";   
+        }}}
     ?>
 
 <!-- echo "<input type='checkbox' class='goal-button' value='" . $row['exercisename'] . "'> <br>"; -->
