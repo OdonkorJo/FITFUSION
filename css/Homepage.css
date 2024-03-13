@@ -384,4 +384,10 @@ h2{
 }
 
 
+#content {
+    background-image: url('banner.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
