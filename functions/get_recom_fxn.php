@@ -1,26 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link 
+</head>
+<body>
+    
+</body>
+</html>
 <?php
 include "../settings/connection.php";
-include "../functions/get_id_fxn.php";
-
-$work_num= testid();
-function getRecommendations($work_num){
-    global $con;
-    $recom_qry = "SELECT `exercisename` FROM `recommendations` WHERE `workoutGoalID` = ?";
-    $stmt = $con->prepare($recom_qry);
-    $stmt->bind_param("i", $work_num);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    if ($result->num_rows > 0) {
-        $rows = $result->fetch_all(MYSQLI_ASSOC);
-        return $rows;
-        
-    } else{
-        echo"false";
-    }
- }
-
-
- function getallrecommendations($con){
+function getallrecommendations($con){
     $query="SELECT `exercisename` FROM `recommendations`";
 
     $results= $con->query($query);
@@ -30,13 +22,46 @@ function getRecommendations($work_num){
         return $rows;
         
     } else{
-        echo"false";
+        return "false";
     }
  }
  
 
+function testid(){
+    global $con;
+    if (!isset($_GET['id'])) {
+        $all = getallrecommendations($con);
+        foreach($all as $row){
+        echo "<button class='goal-button'>". $row['exercisename']. "</button> <br>";   
+    }
+    exit();
+    } else {
+        
+        $work_var = $_GET['id'];
+        $work_qry = "SELECT `WorkoutGoalID` FROM `workout` WHERE `WorkoutGoalID` = $work_var ";
+        $results = $con->query($work_qry);
+        
+        if ($results) {
+            
+            $rows=$results->fetch_all(MYSQLI_ASSOC);
+            foreach($rows as $row){
+                $work_num = $row['WorkoutGoalID'];
+            }
+            $recom_qry = "SELECT `exercisename` FROM `recommendations` WHERE `WorkoutGoalID` = $work_num";
+            $result = $con->query($recom_qry);
+           
+            
+            if ($result) {
+                $all = $result->fetch_all(MYSQLI_ASSOC);
+                foreach($all as $row){
+                    echo "<button class='goal-button'>". $row['exercisename']. "</button> <br>";
 
+            } 
+            echo "<br><br><br>";
+            $all = getallrecommendations($con);
+            foreach($all as $row){
+                echo "<button  class='goal-button '>". $row['exercisename']. "</button> <br>";    
+        }}}}}
+    ?>
 
-
-
-?>
+<!-- echo "<input type='checkbox' class='goal-button' value='" . $row['exercisename'] . "'> <br>"; -->
