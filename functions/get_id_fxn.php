@@ -1,7 +1,8 @@
+
 <?php
 include "../settings/connection.php";
 function getallrecommendations($con){
-    $query="SELECT `exercisename` FROM `recommendations`";
+    $query="SELECT * FROM `recommendations`";
 
     $results= $con->query($query);
 
@@ -19,9 +20,16 @@ function testid(){
     global $con;
     if (!isset($_GET['id'])) {
         $all = getallrecommendations($con);
+        echo "<div class='container'>";
         foreach($all as $row){
-        echo "<button class='goal-button'>". $row['exercisename']. "</button> <br>";   
+            echo "<div class ='cat'>";
+                echo"<label>";
+                    echo "<input type='checkbox' class='goal-button' value='".$row['exerciseID']."'>";
+                    echo "<span>" . $row['exercisename']. "</span> <br>"; 
+                echo "</label>";
+            echo "</div>"; 
     }
+        echo "</div>";
     exit();
     } else {
         
