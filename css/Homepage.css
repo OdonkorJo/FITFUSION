@@ -298,9 +298,6 @@ h2{
 }
 	
 
-.mySlides {
-	display: none;
-  }
 
   /* Start of Sidebar CSS */
 #Sidebar {
@@ -384,10 +381,5 @@ h2{
 }
 
 
-#content {
-    background-image: url('banner.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
 
