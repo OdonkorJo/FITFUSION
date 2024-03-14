@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	
 }
 
 a {
@@ -13,7 +14,6 @@ a {
 li {
 	list-style: none;
 }
-
 
 
 /* using a css variable method */
@@ -34,6 +34,8 @@ li {
 	--light-orange: #FFE0D3;
   --lighter:#000000;
   --very-light-black:#666666;
+  ---fave:#2e4d5a;
+
 }
 
 html {
@@ -45,14 +47,79 @@ body.dark{
 }
 
 body {
-	background-color: #2e3b5a;
-	overflow-x: hidden;
+		background-image: url('../images/workout2.jpg');
+		height: 600px;
+		width: 100%;
+		background-size: cover; 
+		background-repeat: no-repeat;
+		background-position: center top; 
+		/* overflow-x: hidden; */
+		position: relative;
+		
 }
 
-h2{
-	font-size:50px;
+/* for center text */
+#fit{
+	color: var(---fave);
+	
+}
+h1{
+	font-size:100px;
 	font-family: monospace;
 	color: white;
+	justify-content: center;
+
+}
+
+.home::after{
+	content:"";
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 600px;
+	background-color:#111;
+	opacity: 0;
+	z-index: 1;
+
+}
+.home-text{
+	padding-top: 40%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 2;
+}
+.home-text h1{
+	font-size: 40px;
+	margin-bottom: 10px;
+	
+	
+}
+.home-text span{
+	font-size: 50px;
+	display: inline-flex;
+	
+}
+.home-text h2{
+	font-family: monospace;
+	font-weight: 80%;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+a.btn{
+	padding:15px 40px;
+	background-color:var(---fave);
+	;
+	color: #eee;
+	border: none;
+	border: 1px solid #eee;
+	display: inline-block;
+}
+a.btn:hover{
+	background-color: transparent;
 }
 
 
@@ -178,7 +245,7 @@ h2{
 
 /* all */
 #Sidebar .side-menu.top li a:hover {
-	color: var(--very-light-black);
+	color: var(---fave);
 }
 
 /* align with FitFusion */
@@ -187,30 +254,6 @@ h2{
 	display: flex;
 	justify-content: center;
 }
-
-#welcome {
-  position: absolute;
-  top: 50px; /* Adjust the top position as needed */
-  left: 50%; /* Center the text horizontally */
-  transform: translateX(-50%); /* Center the text horizontally */
-  z-index: 1; /* Place the text above the video */
-  font-family: --poppins; /* Use the Poppins font */
-  font-size: 38px; /* Set the font size */
-  color: white; /* Set the text color */
-  padding-top: 0px;
-}
-
-
- #box {
-  border: 1px solid transparent;
-  background-color: white;
-  padding: 20px; 
-  margin: 9% 5% 5% calc(280px + 5%); 
-  height: 40vh; 
-  box-sizing: border-box; 
-}
-  /* border-radius: 10px;will use for the inner content design }
- 
 
 
 /* CONTENT */
@@ -253,14 +296,14 @@ h2{
 	grid-gap: 16px;
 }
 #content main .head-title .left .breadcrumb li {
-	color: var(--dark);
+	color: white;
 }
 #content main .head-title .left .breadcrumb li a {
-	color: var(--dark-grey);
+	color: white;
 	pointer-events: none;
 }
 #content main .head-title .left .breadcrumb li a.active {
-	color: var(--blue);
+	color: white;
 	pointer-events: unset;
 }
 
@@ -309,7 +352,7 @@ h2{
 	background: var(--light);
 	z-index: 2000;
 	font-family: monospace;
-	transition: width 0.3s ease; /* Add transition for smooth animation */
+	transition: width 0.3s ease; 
 	overflow-x: hidden;
 	scrollbar-width: none;
 }
@@ -324,60 +367,18 @@ h2{
 	width: 60px;
 }
 
-/* Homepage.css */
+
 
 /* Add this CSS for the hover effect */
 .box-info li:hover {
-    transform: scale(1.05); /* Slightly enlarge the element on hover */
-    transition: transform 0.3s ease; /* Add smooth transition effect */
+    transform: scale(1.05); 
+    transition: transform 0.3s ease; 
 }
 
 /* Add this CSS for the hover effect */
 .goal-button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-    transition: transform 0.3s ease; /* Add smooth transition effect */
-}
-
-/* Your existing CSS styles */
-/* ... */
-
-/* Additional styles for the set_goals page */
-
-/* Your existing styles */
-/* ... */
-
-/* Additional styles for the set_goals page */
-
-.set-goals-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.goal-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.goal-button {
-    font-family: monospace;
-    font-size: 24px;
-    padding: 20px 40px;
-    margin: 10px;
-    border: none;
-    border-radius: 30px;
-    background-color: var(--blue);
-    color: var(--light);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.goal-button:hover {
-    background-color: var(--dark-blue);
+    transform: scale(1.05);
+    transition: transform 0.3s ease; 
 }
 
 

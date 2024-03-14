@@ -81,14 +81,31 @@
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Home</a>
+							<a class="active" href="../view/Homepage.php">Home</a>
 						</li>
 					</ul>
 				</div>
 				
 			</div>
+			
+			<div class="home-text">
+				<h1>Welcome to <span id="fit">FitFusion</span></h1>
+				<h2>Transform your body, Transform your life!</h2>
+				<a href="../view/set_goals.php"class="btn">Let's Get Started</a>
+			</div>
+			
+			
+		
+		</main>
+</section>
 
-			<!-- <div id="box">  -->
+
+		
+
+	
+
+
+			
 				
 			
 				
