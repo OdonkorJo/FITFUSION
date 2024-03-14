@@ -89,9 +89,31 @@
 			</div>
 
 			<!-- <div id="box">  -->
-				
 			
-				
+				<ul class="box-info">
+					<li>
+						<a id= "pro" href="">
+						<span class="text">
+							
+							<h3>YOUR GOALS</h3>
+							
+						</span></a>
+					</li>
+					<li>
+						
+						<span class="text">
+							<a id= "pro" href="">
+							<h3>TRACK</h3>
+						</span></a>
+					</li>
+					<li>
+						<span class="text">
+							<a id= "pro" href="../view/Recommendation.php">
+							<h3>RECOMMENDATIONS</h3>
+						</span></a>
+					</li>
+				</ul>
+
 				
 
 				

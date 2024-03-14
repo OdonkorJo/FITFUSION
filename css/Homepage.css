@@ -298,9 +298,6 @@ h2{
 }
 	
 
-.mySlides {
-	display: none;
-  }
 
   /* Start of Sidebar CSS */
 #Sidebar {
@@ -382,6 +379,7 @@ h2{
 .goal-button:hover {
     background-color: var(--dark-blue);
 }
+
 
 
 
