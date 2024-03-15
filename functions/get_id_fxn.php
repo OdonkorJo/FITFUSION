@@ -22,7 +22,7 @@ function testid(){
         $all = getallrecommendations($con);
         echo "<div class='container'>";
         foreach($all as $row){
-            echo "<div class ='cat'>";
+            echo "<div class ='cat' .>";
                 echo"<label>";
                     echo "<input type='checkbox' class='goal-button' value='".$row['exerciseID']."'>";
                     echo "<span>" . $row['exercisename']. "</span> <br>"; 
