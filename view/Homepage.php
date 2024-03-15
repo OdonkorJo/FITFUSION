@@ -52,7 +52,7 @@
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#" class="logout">
+				<a href="../login/login.php" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">LOGOUT</span>
 				</a>
@@ -108,7 +108,7 @@
 					</li>
 					<li>
 						<span class="text">
-							<a id= "pro" href="">
+							<a id= "pro" href="../view/Recommendation.php">
 							<h3>RECOMMENDATIONS</h3>
 						</span></a>
 					</li>
