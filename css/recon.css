@@ -44,15 +44,8 @@ body {
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
     background-color: #F75A1B; /* Change background color for selected checkbox */
   }
-<<<<<<< Updated upstream
   
   button{
-    height: 70px;
+    height: 50px;
     width: 70px;
-=======
-
-  button{
-    width:200px;
-    height:100px;
->>>>>>> Stashed changes
   }
