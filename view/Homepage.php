@@ -81,39 +81,34 @@
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Home</a>
+							<a class="active" href="../view/Homepage.php">Home</a>
 						</li>
 					</ul>
 				</div>
 				
 			</div>
-
-			<!-- <div id="box">  -->
 			
-				<ul class="box-info">
-					<li>
-						<a id= "pro" href="">
-						<span class="text">
-							
-							<h3>YOUR GOALS</h3>
-							
-						</span></a>
-					</li>
-					<li>
-						
-						<span class="text">
-							<a id= "pro" href="">
-							<h3>TRACK</h3>
-						</span></a>
-					</li>
-					<li>
-						<span class="text">
-							<a id= "pro" href="../view/Recommendation.php">
-							<h3>RECOMMENDATIONS</h3>
-						</span></a>
-					</li>
-				</ul>
+			<div class="home-text">
+				<h1>Welcome to <span id="fit">FitFusion</span></h1>
+				<h2>Transform your body, Transform your life!</h2>
+				<a href="../view/set_goals.php"class="btn">Let's Get Started</a>
+			</div>
+			
+			
+		
+		</main>
+</section>
 
+
+		
+
+	
+
+
+			
+				
+			
+				
 				
 
 				
