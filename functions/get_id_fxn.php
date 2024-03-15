@@ -20,16 +20,20 @@ function testid(){
     global $con;
     if (!isset($_GET['id'])) {
         $all = getallrecommendations($con);
+        echo "<form action = \"../action/recommendation_action.php\" method ='post'>";
         echo "<div class='container'>";
         foreach($all as $row){
             echo "<div class ='cat'>";
                 echo"<label>";
-                    echo "<input type='checkbox' class='goal-button' value='".$row['exerciseID']."'>";
-                    echo "<span>" . $row['exercisename']. "</span> <br>"; 
+                echo "<input type='checkbox' name = 'exerise[]' value= '".$row['exerciseID']."'>";
+                echo "<span>" . $row['exercisename']. "</span> <br>"; 
                 echo "</label>";
             echo "</div>"; 
     }
         echo "</div>";
+        echo "<button type='submit' name='submit'>Done</button>";
+        echo "</form>";
+
     exit();
     } else {
         
@@ -51,9 +55,9 @@ function testid(){
                 $all = $result->fetch_all(MYSQLI_ASSOC);
                 echo "<div class='container'>";
                 foreach($all as $row){
-                    echo "<div class ='cat'>";
+                    echo "<div class ='cat' id = '".$row['exerciseID']."'>";
                         echo"<label>";
-                            echo "<input type='checkbox' class='goal-button' value='".$row['exerciseID']."'>";
+                            echo "<input type='checkbox'>";
                             echo "<span>" . $row['exercisename']. "</span> <br>"; 
                         echo "</label>";
                     echo "</div>"; 
@@ -67,9 +71,9 @@ function testid(){
             $all = getallrecommendations($con);
             echo "<div class='container'>";
             foreach($all as $row){
-                echo "<div class ='cat'>";
+                echo "<div class ='cat' id = '".$row['exerciseID']."'>";
                     echo"<label>";
-                        echo "<input type='checkbox' class='goal-button' value='".$row['exerciseID']."'>";
+                        echo "<input type='checkbox'>";
                         echo "<span>" . $row['exercisename']. "</span> <br>"; 
                     echo "</label>";
                 echo "</div>"; 

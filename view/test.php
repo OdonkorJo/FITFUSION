@@ -1,4 +1,6 @@
 
+
+
 <?php
 include "../settings/connection.php";
 function getallrecommendations($con){
@@ -8,15 +10,17 @@ function getallrecommendations($con){
 
     if ($results->num_rows > 0) {
         $rows = $results->fetch_all(MYSQLI_ASSOC);
-        var_dump($rows);
+        foreach($rows as $row)
+        {
+            echo "<p id='".$row['exerciseID']."'>".$row['exercisename']."</p>";
+        }
         
     } else{
         return "false";
     }
  }
-
- echo getallrecommendations($con);
-
+ 
+echo getallrecommendations($con);
 function testid(){
     global $con;
     if (!isset($_GET['id'])) {
@@ -76,7 +80,11 @@ function testid(){
                 echo "</div>"; 
         }
             echo "</div>";   
+  
+  
         }}}
+
     ?>
+
 
 <!-- echo "<input type='checkbox' class='goal-button' value='" . $row['exercisename'] . "'> <br>"; -->
