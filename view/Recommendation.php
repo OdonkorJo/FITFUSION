@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../css/recon.css">
 </head>
 <body>
-<?php
+    <?php
     include "../functions/get_id_fxn.php";
     echo testid();
-    ?>				
+    ?>
 
-    
+
+   
 </body>
 </html>
 
