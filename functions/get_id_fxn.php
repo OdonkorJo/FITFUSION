@@ -22,8 +22,13 @@ function testid(){
         $all = getallrecommendations($con);
         echo "<form action = \"../action/recommendation_action.php\" method ='post'>";
         echo "<div class='container'>";
+
         foreach ($all as $row) {
             echo "<div class ='cat'>";
+
+
+        foreach($all as $row){
+            echo "<div class ='cat' .>";
 
                 echo"<label>";
                 echo "<input type='checkbox' name = 'exerise[]' value= '".$row['exerciseID']."'>";
