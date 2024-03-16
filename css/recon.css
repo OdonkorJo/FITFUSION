@@ -45,3 +45,7 @@ body {
     background-color: #F75A1B; /* Change background color for selected checkbox */
   }
   
+  button{
+    height: 50px;
+    width: 70px;
+  }

@@ -1,5 +1,7 @@
 <?php
+
 include "../settings/core.php";
+include "../functions/workout_fxn.php";
 isLoggedIn();
 
 ?>
@@ -9,10 +11,10 @@ isLoggedIn();
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<!-- using boxicon (for external icons) -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="../css/Homepage.css">
+	<link rel="stylesheet" href="../css/recommendation.css">
 	
     <script src="../js/Homepage.js"></script>
 	<title>Dashboard</title>
@@ -44,7 +46,7 @@ isLoggedIn();
 				</a>
 			</li>
 			<li>
-				<a href="../view/workout.php">
+				<a href="#">
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">SCHEDULE WORKOUT</span>
 				</a>
@@ -89,27 +91,35 @@ isLoggedIn();
 						<li>
 							<a class="active" href="../view/Homepage.php">Home</a>
 						</li>
-						
 
+						<li><i class='bx bx-chevron-right' ></i></li>
+
+						<li>
+							<a class="active" href="../view/set_goals.php">Set Goals</a>
+						</li>
+
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="active" href="../view/Recommendation.php">Recommendations</a>
+						</li>
+
+						<li><i class='bx bx-chevron-right'></i></li>
+						<li>
+							<a class="active" href="../view/workout.php">Workout</a>
+						</li>
 					</ul>
 					
+					
 				</div>
-				<h3 class="name"> <?php echo $_SESSION["user_name"]?></h3>
-				
-				
-				
-			</div>
-			
-			
-			<div class="home-text">
-				<h1>Welcome to <span id="fit">FitFusion</span></h1>
-				<h2>Transform your body, Transform your life!</h2>
-				<a href="../view/set_goals.php"class="btn">Let's Get Started</a>
-			</div>
-			
-			
-		
+				<h3 class="name"> <?php echo $_SESSION["user_name"]?></h3>	
+			</div>		
 		</main>
+        <div>
+            <?php
+            echo get_exercise($con);
+            
+            ?>
+
 </section>
 
 
