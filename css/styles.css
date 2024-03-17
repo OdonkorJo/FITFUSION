@@ -1,0 +1,77 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('gym.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.exercises {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.exercise {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 20px;
+    cursor: grab;
+}
+
+.schedule {
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid #333;
+    border-bottom: 3px solid #333;
+    padding: 10px 0;
+}
+
+.day {
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 20px 10px;
+    background-color: #f8f8f8;
+    border: 2px dashed #333;
+    border-radius: 10px;
+    min-height: 100px;
+    position: relative;
+}
+
+.day:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.submit-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgb(45, 142, 239);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
