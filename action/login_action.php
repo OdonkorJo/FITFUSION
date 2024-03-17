@@ -28,8 +28,9 @@ if (!isset($_POST["submit"])) {
         } else {
 
             $_SESSION["user_id"] = $row["userID"];
-            // Redirect with success message
-            header("Location:../view/set_goals.php?msg=success");
+            $_SESSION["user_name"]=$row["fName"];
+                        // Redirect with success message
+            header("Location:../view/Homepage.php?msg=success");
             exit(); // Prevent further execution
         }
     }

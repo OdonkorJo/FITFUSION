@@ -7,12 +7,12 @@ session_start();
 
 function isLoggedIn(){
     //we will check if the user id session exists
-    if(isset($_SESSION['user_id'])){
+    if(isset($_SESSION['user_id'])&& isset($_SESSION["user_name"])){
         return true;
     } 
     else{
         //redirect to login
-        header("Location:login.php");
+        header("Location:../login/login.php");
         die();
     }
 

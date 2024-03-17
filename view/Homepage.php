@@ -1,9 +1,15 @@
+<?php
+include "../settings/core.php";
+isLoggedIn();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	
 	<!-- using boxicon (for external icons) -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="../css/Homepage.css">
@@ -38,7 +44,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="../view/workout.php">
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">SCHEDULE WORKOUT</span>
 				</a>
@@ -83,10 +89,17 @@
 						<li>
 							<a class="active" href="../view/Homepage.php">Home</a>
 						</li>
+						
+
 					</ul>
+					
 				</div>
 				
+				
+				
+				
 			</div>
+			
 			
 			<div class="home-text">
 				<h1>Welcome to <span id="fit">FitFusion</span></h1>

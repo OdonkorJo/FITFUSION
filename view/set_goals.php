@@ -1,3 +1,9 @@
+<?php
+include "../settings/core.php";
+isLoggedIn();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +39,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../view/workout.php">
                     <i class='bx bxs-calendar-check' ></i>
                     <span class="text">SCHEDULE WORKOUT</span>
                 </a>
@@ -57,9 +63,31 @@
 
     <section id="content">
         <main>
-            <div class="head-title">
-                <!-- Your header content -->
-            </div>
+			<div class="head-title">
+				<div class="left">
+					
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+
+						<li>
+							<a class="active" href="../view/Homepage.php">Home</a>
+						</li>
+                        <li><i class='bx bx-chevron-right' ></i></li>
+                        
+						<li>
+							<a class="active" href="../view/set_goals.php">Set Goal</a>
+						</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+			</div>
 
             <div class="set-goals-page">
                 <h2>Set Your Fitness Goals <br><br></h2>

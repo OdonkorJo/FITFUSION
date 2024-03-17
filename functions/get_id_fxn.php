@@ -1,63 +1,134 @@
-
 <?php
 include "../settings/connection.php";
-function getallrecommendations($con){
-    $query="SELECT * FROM `recommendations`";
+function getallrecommendations($con)
+{
+    $query = "SELECT * FROM recommendations";
 
-    $results= $con->query($query);
+    $results = $con->query($query);
 
     if ($results->num_rows > 0) {
         $rows = $results->fetch_all(MYSQLI_ASSOC);
         return $rows;
-        
-    } else{
+        //return $rows;
+
+    } else {
         return "false";
     }
- }
- 
+}
+
+
 
 function testid(){
     global $con;
     if (!isset($_GET['id'])) {
-        $all = getallrecommendations($con);
-        echo "<div class='container'>";
-        foreach($all as $row){
-            echo "<div class ='cat'>";
-                echo"<label>";
-                    echo "<input type='checkbox' class='goal-button' value='".$row['exerciseID']."'>";
-                    echo "<span>" . $row['exercisename']. "</span> <br>"; 
-                echo "</label>";
-            echo "</div>"; 
-    }
-        echo "</div>";
-    exit();
-    } else {
-        
-        $work_var = $_GET['id'];
-        $work_qry = "SELECT `WorkoutGoalID` FROM `workout` WHERE `WorkoutGoalID` = $work_var ";
-        $results = $con->query($work_qry);
-        
-        if ($results) {
+        $alls = getallrecommendations($con);
+       
+        echo "<form action = \"../action/recommendation_action.php\" method ='post'>";
+        echo "<div class='grid-container'>";
+        foreach ($alls as $row) {
+            $exerciseName=$row['exercisename'];
+            $image_path = '../images/' . strtolower($exerciseName). '.jpg';
             
-            $rows=$results->fetch_all(MYSQLI_ASSOC);
-            foreach($rows as $row){
+            echo '<div class="item">';
+            echo '<div class="image">';
+            echo '<img src="' . $image_path . '">';
+            echo '</div>';
+            echo "<div class='cat " . $row['exercisename'] . "'>";
+
+            echo"<label>";
+            echo "<input type='checkbox' name = 'exerise[]' value= '".$row['exerciseID']."'>";
+            echo "<span>" . $row['exercisename']. "</span> <br>"; 
+            echo "</label>";
+            echo "</div>"; 
+            echo '</div>'; // close item div
+        }
+        echo "</div><br><br>"; // close container div
+        echo "<div class='butt'>";
+        echo "<button class='bom' type='submit' name='submit'><i class='fa-solid fa-dumbbell fa-rotate-270' style='color:'#0f0000';></i>  Get Fit</button>";
+        echo "</div><br><br>";
+
+        echo "</form>";
+        
+        exit();
+    }
+     else {
+
+        $work_var = $_GET['id'];
+        $work_qry = "SELECT WorkoutGoalID FROM workout WHERE WorkoutGoalID = $work_var ";
+        $results = $con->query($work_qry);
+
+        if ($results) {
+
+            $rows = $results->fetch_all(MYSQLI_ASSOC);
+            foreach ($rows as $row) {
                 $work_num = $row['WorkoutGoalID'];
             }
-            $recom_qry = "SELECT `exercisename` FROM `recommendations` WHERE `WorkoutGoalID` = $work_num";
+            $recom_qry = "SELECT * FROM recommendations WHERE WorkoutGoalID = $work_num";
             $result = $con->query($recom_qry);
-           
-            
+
+
             if ($result) {
                 $all = $result->fetch_all(MYSQLI_ASSOC);
-                foreach($all as $row){
-                    echo "<button class='goal-button'>". $row['exercisename']. "</button> <br>";
+                echo "<form action = \"../action/recommendation_action.php\" method ='post'>";
+                echo "<h3> Recommended exercise</h3>";
+                echo "<div class='grid-container'>";
+                foreach ($all as $row) {
+                    $exerciseName=$row['exercisename'];
+                    $image_path = '../images/' . strtolower($exerciseName). '.jpg';
+                    
+                    echo '<div class="item">';
+                    echo '<div class="image">';
+                    echo '<img src="' . $image_path . '"<br>>';
+                    echo '</div>';
+                    echo "<div class='cat " . $row['exercisename'] . "'>";
+        
+                    echo"<label>";
+                    echo "<input type='checkbox' name = 'exerise[]' value= '".$row['exerciseID']."'>";
+                    echo "<span>" . $row['exercisename']. "</span> <br>"; 
+                    echo "</label>";
+                    echo "</div>"; 
+                    echo '</div>'; // close item div
+                }echo "</div>";
+               
+                
 
-            } 
-            echo "<br><br><br>";
-            $all = getallrecommendations($con);
-            foreach($all as $row){
-                echo "<button  class='goal-button '>". $row['exercisename']. "</button> <br>";    
-        }}}}}
+
+            echo "<br><br><br><br>";
+            echo "<h3>All exercise</h3>";
+            echo "<div class='grid-container'>";
+            
+            $alls = getallrecommendations($con);
+            
+
+            foreach ($alls as $row) {
+                $exerciseName=$row['exercisename'];
+                $image_path = '../images/' . strtolower($exerciseName). '.jpg';
+                
+                echo '<div class="item">';
+                echo '<div class="image">';
+                echo '<img src="' . $image_path . '"<br>>';
+                echo '</div>';
+                echo "<div class='cat " . $row['exercisename'] . "'>";
+    
+                echo"<label>";
+                echo "<input type='checkbox' name = 'exerise[]' value= '".$row['exerciseID']."'>";
+                echo "<span>" . $row['exercisename']. "</span> <br>"; 
+                echo "</label>";
+                echo "</div>"; 
+                echo '</div>'; // close item div
+            }
+          ; // close container div
+            echo "<br><br>";
+           
+            echo "<div class='butt' <br><br>";
+            echo "<button class='bom' type='submit' name='submit'><i class='fa-solid fa-dumbbell fa-rotate-270' style='color:'#0f0000';></i>  Get Fit</button>";
+            echo "</div>";
+            echo "</div><br><br>";
+            echo "</form>";
+            
+        }
+        
+        }}}
+
+
     ?>
-
-<!-- echo "<input type='checkbox' class='goal-button' value='" . $row['exercisename'] . "'> <br>"; -->

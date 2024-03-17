@@ -57,6 +57,11 @@ body {
 		position: relative;
 		
 }
+.name h3{
+	margin-left: 200px;
+	font-size: 100px;
+	color:white;
+}
 
 /* for center text */
 #fit{
@@ -91,15 +96,16 @@ h1{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	z-index: 2;
+	padding-right: 230px;
 }
 .home-text h1{
-	font-size: 40px;
+	font-size:30px;
 	margin-bottom: 10px;
 	
 	
 }
 .home-text span{
-	font-size: 50px;
+	font-size: 70px;
 	display: inline-flex;
 	
 }
