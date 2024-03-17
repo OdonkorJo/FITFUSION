@@ -34,7 +34,7 @@ li {
 	--light-orange: #FFE0D3;
   --lighter:#000000;
   --very-light-black:#666666;
-  ---fave:#2e4d5a;
+  --fave:#2e4d5a;
 
 }
 
@@ -353,7 +353,7 @@ a.btn:hover{
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 280px; /* Initial width */
+	width: 280px; 
 	height: 100%;
 	background: var(--light);
 	z-index: 2000;
@@ -363,12 +363,12 @@ a.btn:hover{
 	scrollbar-width: none;
 }
 
-/* Hover effect for expanding sidebar */
+
 #Sidebar:hover {
-	width: 280px; /* Sidebar width on hover */
+	width: 280px; 
 }
 
-/* Smaller sidebar width when not hovered over */
+
 #Sidebar.hide {
 	width: 60px;
 }
@@ -386,6 +386,47 @@ a.btn:hover{
     transform: scale(1.05);
     transition: transform 0.3s ease; 
 }
+
+
+@media (max-width: 768px) {
+    .name h3 {
+        margin-left: 0;
+        font-size: 60px;
+    }
+
+    .home-text {
+        padding-top: 20%;
+        padding-right: 30px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+
+/* For screens between 768px and 1200px (small to medium screens) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .name h3 {
+        font-size: 80px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+}
+
+/* For screens larger than 1200px (large screens) */
+@media (min-width: 1200px) {
+    .name h3 {
+        font-size: 100px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+}
+
+
 
 
 

@@ -85,24 +85,13 @@ include "../functions/get_id_fxn.php";
 				<div class="left">
 					
 					<ul class="breadcrumb">
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
+						<li><a href="#">Dashboard</a></li>
 						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="../view/Homepage.php">Home</a>
-						</li>
-
+						<li><a class="active" href="../view/Homepage.php">Home</a></li>
 						<li><i class='bx bx-chevron-right' ></i></li>
-
-						<li>
-							<a class="active" href="../view/set_goals.php">Set Goals</a>
-						</li>
-
+						<li><a class="active" href="../view/set_goals.php">Set Goals</a></li>
 						<li><i class='bx bx-chevron-right'></i></li>
-						<li>
-							<a class="active" href="../view/Recommendation.php">Recommendations</a>
-						</li>
+						<li><a class="active" href="../view/Recommendation.php">Recommendations</a></li>
 					</ul>
 					
 				</div>
