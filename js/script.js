@@ -36,11 +36,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             this.style.backgroundColor = 'white';
         });
 
-        // Toggle functionality when a day is clicked
         day.addEventListener('click', function() {
             if (this.children.length > 0) {
-                this.children[0].style.display = 'block'; // Revert the display style
-                this.removeChild(this.children[0]); // Remove the dragged item
+                this.children[0].style.display = 'block'; 
+                this.removeChild(this.children[0]); 
             }
         });
     });
