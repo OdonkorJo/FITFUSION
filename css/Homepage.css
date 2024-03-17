@@ -124,6 +124,8 @@ a.btn{
 	border: 1px solid #eee;
 	display: inline-block;
 }
+
+
 a.btn:hover{
 	background-color: transparent;
 }
