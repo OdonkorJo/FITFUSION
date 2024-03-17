@@ -22,7 +22,6 @@ function testid(){
         $all = getallrecommendations($con);
         echo "<form action = \"../action/recommendation_action.php\" method ='post'>";
         echo "<div class='container'>";
-
         foreach ($all as $row) {
             echo "<div class ='cat'>";
 
@@ -39,7 +38,6 @@ function testid(){
         echo "</div>";
         echo "<button type='submit' name='submit'>Done</button>";
         echo "</form>";
-
     exit();
        
 
