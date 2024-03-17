@@ -455,6 +455,37 @@ a.btn:hover{
 
 .auth-buttons .btn {
     padding: 20px 60px;
+    border-radius: 30px;
+    font-size: 20px; 
+}
+
+.auth-buttons .btn:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
+}
+
+.additional-text-container {
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.additional-text {
+    font-size: 28px; 
+    color: white; 
+	font-family: monospace;
+}
+
+.auth-buttons {
+    text-align: center; /* Center-align the buttons */
+    margin-top: 20px; /* Add some top margin */
+}
+
+.auth-buttons .btn {
+    padding: 15px 40px; /* Adjust button padding */
     border-radius: 30px; /* Increase the border-radius for more rounded ends */
     font-size: 20px; /* Increase the font size */
 }
@@ -462,4 +493,10 @@ a.btn:hover{
 .auth-buttons .btn:hover {
     transform: scale(1.07);
     transition: transform 0.3s ease;
+}
+
+.About {
+	font-size: 30px;
+	font-family: monospace;
+	color: #FD7238;
 }
