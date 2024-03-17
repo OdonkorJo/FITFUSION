@@ -96,22 +96,23 @@ h1{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	z-index: 2;
+	padding-right: 230px;
 }
 .home-text h1{
-	font-size: 40px;
+	font-size:30px;
 	margin-bottom: 10px;
 	
 	
 }
 .home-text span{
-	font-size: 50px;
+	font-size: 70px;
 	display: inline-flex;
 	
 }
 .home-text h2{
 	font-family: monospace;
-	font-weight: 80%;
-	font-size: 20px;
+	font-weight: 60%;
+	font-size: 15px;
 	margin-bottom: 20px;
 }
 a.btn{

@@ -63,7 +63,6 @@ isLoggedIn();
 
     <section id="content">
         <main>
-        <main>
 			<div class="head-title">
 				<div class="left">
 					
@@ -79,12 +78,12 @@ isLoggedIn();
                         <li><i class='bx bx-chevron-right' ></i></li>
                         
 						<li>
-							<a class="active" href="../set_goals.php">Set Goal</a>
+							<a class="active" href="../view/set_goals.php">Set Goal</a>
 						</li>
 					</ul>
 					
 				</div>
-				<h3 class="name"> <?php echo $_SESSION["user_name"]?></h3>
+				
 				
 				
 				

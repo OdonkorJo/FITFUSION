@@ -94,7 +94,7 @@ isLoggedIn();
 					</ul>
 					
 				</div>
-				<h3 class="name"> <?php echo $_SESSION["user_name"]?></h3>
+				
 				
 				
 				
