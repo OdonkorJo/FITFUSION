@@ -47,15 +47,10 @@ isLoggedIn();
             <li class="active">
                 <a href="../view/workout.php">
                     <i class='bx bxs-calendar-check'></i>
-                    <span class="text">SCHEDULE WORKOUT</span>
+                    <span class="text">TRACK WORKOUT</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-edit'></i>
-                    <span class="text">TRACKER</span>
-                </a>
-            </li>
+            
         </ul>
         <ul class="side-menu">
             <li>
