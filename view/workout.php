@@ -1,24 +1,13 @@
-<?php
-include "../settings/core.php";
-include "../functions/workout_fxn.php";
-isLoggedIn();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- using boxicon (for external icons) -->
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/Homepage.css">
-    <link rel="stylesheet" href="../css/schedule_workout.css"> <!-- Link to schedule_workout.css -->
     
     <title>Schedule Workout</title>
 </head>
-<body>
+
     <!-- Sidebar -->
     <section id="Sidebar">
         <a href="#" class="collection">
@@ -125,7 +114,5 @@ isLoggedIn();
         </main>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/testschedule.js"></script>
 </body>
 </html>
