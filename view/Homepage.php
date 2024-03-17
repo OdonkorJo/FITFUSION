@@ -52,7 +52,7 @@ isLoggedIn();
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="../login/login.php" class="logout">
+				<a href="LandingPage.php" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">LOGOUT</span>
 				</a>

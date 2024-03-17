@@ -117,8 +117,7 @@ h1{
 }
 a.btn{
 	padding:15px 40px;
-	background-color:var(---fave);
-	;
+	background-color:var(--fave);
 	color: #eee;
 	border: none;
 	border: 1px solid #eee;
@@ -253,7 +252,7 @@ a.btn:hover{
 
 /* all */
 #Sidebar .side-menu.top li a:hover {
-	color: var(---fave);
+	color: var(--fave);
 }
 
 /* align with FitFusion */
