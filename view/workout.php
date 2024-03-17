@@ -1,5 +1,4 @@
 <?php
-
 include "../settings/core.php";
 include "../functions/workout_fxn.php";
 isLoggedIn();
