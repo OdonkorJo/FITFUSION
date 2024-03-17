@@ -13,7 +13,8 @@ include "../functions/get_id_fxn.php";
 
 	<!-- using boxicon (for external icons) -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="../css/recon.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="../css/recommendation.css">
 	
     <script src="../js/Homepage.js"></script>
@@ -105,13 +106,13 @@ include "../functions/get_id_fxn.php";
 					</ul>
 					
 				</div>
-				<h3 class="name"> <?php echo $_SESSION["user_name"]?></h3>
+				
 				</div>
 			</main>
-            <div>
-                <?php
-                echo testid();
-                ?>
+			<div>
+				<?php echo testid();?>
+			</div>
+				 
 
             
 </section>

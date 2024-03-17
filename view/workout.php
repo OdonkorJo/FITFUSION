@@ -14,10 +14,11 @@ isLoggedIn();
 
 	<!-- using boxicon (for external icons) -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="../css/recommendation.css">
-	
+	<link rel="stylesheet" href="../css/schedule.css"> <!-- Link to schedule_workout.css -->
+    <link rel="stylesheet" href="../css/Homepage.css">
+
     <script src="../js/Homepage.js"></script>
-	<title>Dashboard</title>
+	<title>Workout</title>
 </head>
 <body>
 <!-- creation of the sidebar -->
@@ -111,28 +112,62 @@ isLoggedIn();
 					
 					
 				</div>
-				<h3 class="name"> <?php echo $_SESSION["user_name"]?></h3>	
+				
 			</div>		
-		</main>
-        <div>
+		
+			<div class="exercise-container" id="box" ondrop="drop(event)" ondragover="allowDrop(event)">
             <?php
             echo get_exercise($con);
+			?>
+        </div>
             
-            ?>
+		<div class="calendar">
+                <div class="day" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <span class="day-label">Sunday</span>
+                </div>
+                <div class="day" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <span class="day-label">Monday</span>
+                </div>
+                <div class="day" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <span class="day-label">Tuesday</span>
+                </div>
+                <div class="day" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <span class="day-label">Wednesday</span>
+                </div>
+                <div class="day" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <span class="day-label">Thursday</span>
+                </div>
+                <div class="day" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <span class="day-label">Friday</span>
+                </div>
+                <div class="day" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <span class="day-label">Saturday</span>
+                </div>
+            </div>
+        </main>
+    </section>
 
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
 
+        function drag(event, id) {
+            event.dataTransfer.setData("text", id);
+        }
 
-		
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            var element = document.getElementById(data);
 
-	
-
-
-			
-				
-			
-				
-				
-
-				
+            if (event.target.classList.contains("day")) {
+                event.target.appendChild(element);
+            } else if (event.target.id === "box") {
+                element.parentNode.removeChild(element);
+                document.getElementById("box").appendChild(element);
+            }
+        }
+    </script>
 </body>
 </html>

@@ -17,7 +17,9 @@ function get_exercise($con)
             if ($result->num_rows > 0) {
                 $exercise = $result->fetch_assoc();
                 $exerciseName = $exercise['exercisename'];
-                echo "<button>$exerciseName</button><br>";
+                echo"<div class='exercise-wrapper'>";
+                echo "<div class='exercise' draggable='true' id='$exerciseName' ondragstart='drag(event, '$exerciseName')>$exerciseName</div>";
+                echo"</div>";
 
 
 

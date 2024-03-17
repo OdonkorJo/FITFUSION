@@ -264,8 +264,8 @@ a.btn:hover{
 /* CONTENT */
 #content {
 	position: relative;
-	width: calc(100% - 280px);
-	left: 280px;
+	width: calc(100% - 200px);
+	left: 100px;
 	transition: .3s ease;
 }
 #sidebar.hide ~ #content {
@@ -276,13 +276,14 @@ a.btn:hover{
 
 /* MAIN */
 #content main {
-	width: 100%;
 	padding: 36px 24px;
 	font-family: monospace;
 	max-height: calc(100vh - 56px);
 	overflow-y: auto;
+	
 }
 #content main .head-title {
+	padding-top: 5px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -294,14 +295,17 @@ a.btn:hover{
 	font-weight: 600;
 	margin-bottom: 10px;
 	color: var(--dark);
+	
 }
 #content main .head-title .left .breadcrumb {
 	display: flex;
 	align-items: center;
 	grid-gap: 16px;
+	
 }
 #content main .head-title .left .breadcrumb li {
 	color: white;
+	padding-left: 20px;
 }
 #content main .head-title .left .breadcrumb li a {
 	color: white;
@@ -314,36 +318,7 @@ a.btn:hover{
 
 /* for stats boxes */
 
-#content main .box-info {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-	grid-gap: 24px;
-	margin-top: 40px;
-}
-#content main .box-info li {
-	padding: 24px;
-	background: var(--light);
-	border-radius: 20px;
-	display: flex;
-	/* align-items: center; */
-	grid-gap: 24px;
-	width: 200px;
-	height: 150px;
-	margin-left: 20px;
-	justify-content: center;
-	
-	
-}
 
-#content main .box-info li .text h3 {
-	font-size: 15px;
-	/* font-weight:100; */
-	color: var(--lighter);
-	margin-left: 20px;
-	/* text-decoration: solid; */
-	padding-right: 20px;	
-	padding-top: 40px;
-}
 	
 
 
@@ -386,6 +361,102 @@ a.btn:hover{
     transition: transform 0.3s ease; 
 }
 
+/* continuation from recon */
+body {
+    font-family: monospace;
+    margin: 0 auto;
+    text-align: center;
+    background-color:#2e4d5a;
+  }
+  
+  .container {
+    width: 250px;
+    height: 38px;
+    margin: 100px auto;
+  }
+  
+  .cat {
+    margin: 4px;
+    background-color: #2e4d5a;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .cat label {
+    float: left;
+    line-height: 3.0em;
+    width: 8.0em;
+    height: 3.0em;
+  }
+  
+  .cat label span {
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+    color: #fff;
+  }
+  
+  .cat label input {
+    position: absolute;
+    display: none;
+  }
+  
+  .cat label input:checked + span {
+    color: #ffffff;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    background-color: #F75A1B; /* Change background color for selected checkbox */
+  }
+  
+  button{
+	
+    height: 50px;
+    width: 200px;
+	border: transparent 3px;
+	border-radius: 25px;
+	background-color: #F75A1B;
+	color: white;
+	font-size: large;
 
+	
+  }
+  .fa-solid .fa-dumbbell .fa-rotate-270{
+	margin-left:10px;  }
+  
 
+.grid-container{
+    display: grid;
+	grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+	
+	
+	
+} 
 
+.item {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.image {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+	overflow: hidden;
+    border-radius: 15px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.exercise{
+	display:inline;
+	justify-content: space-between;
+}
+.exercise button{
+	margin-left: 20px;
+}
