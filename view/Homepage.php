@@ -88,10 +88,6 @@ isLoggedIn();
 					</ul>
 					
 				</div>
-				
-				
-				
-				
 			</div>
 			
 			
@@ -100,8 +96,6 @@ isLoggedIn();
 				<h2>Transform your body, Transform your life!</h2>
 				<a href="../view/set_goals.php"class="btn">Let's Get Started</a>
 			</div>
-			
-			
 		
 		</main>
 </section>
