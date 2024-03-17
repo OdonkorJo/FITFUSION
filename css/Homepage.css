@@ -431,3 +431,33 @@ a.btn:hover{
 
 
 
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-buttons-container {
+    text-align: center;
+    margin-top: 20px;
+	
+}
+
+.sub-heading {
+    font-size: 30px;
+    text-align: center;
+	color:cornsilk;
+}
+
+.auth-buttons .btn {
+    padding: 20px 60px;
+    border-radius: 30px; /* Increase the border-radius for more rounded ends */
+    font-size: 20px; /* Increase the font size */
+}
+
+.auth-buttons .btn:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
+}
