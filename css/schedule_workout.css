@@ -1,0 +1,60 @@
+/* Calendar styles */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+.day {
+    border: 1px transparent #ccc;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.day-label {
+    background-color: #333;
+    color: white;
+    font-family: monospace;
+    padding: 5px;
+}
+
+#box{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exercise-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.exercise-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.exercise {
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    font-family: monospace;
+}
+
+.exercise:hover {
+    background-color: #FFA500; /* Orange on hover */
+}
+
+.hide{
+    display: none;
+}
+.drag-over{
+    border:dashed 3px #FFA500;
+}
