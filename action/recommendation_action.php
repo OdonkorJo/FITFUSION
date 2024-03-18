@@ -12,7 +12,7 @@ if (!isset($_POST["submit"])){
         $userid = $_SESSION["user_name"];
         foreach($_POST['exerise'] as $exerciseID) {
             $user = "INSERT INTO userExercises (userid, exerciseID, workoutGoalID, userStatus) 
-            VALUES ((SELECT `userID` FROM `fituser` WHERE `fName` = '$userid'), 
+            VALUES ((SELECT `userID` FROM `fitUser` WHERE `fName` = '$userid'), 
                     $exerciseID, 
                     (SELECT workoutGoalID FROM recommendations WHERE exerciseID = $exerciseID), 
                     'incomplete')";
@@ -20,7 +20,7 @@ if (!isset($_POST["submit"])){
         if($result){
             header("Location:../view/workout.php");
         }
-        
+          
 
     }else{
         

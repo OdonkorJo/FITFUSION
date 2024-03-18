@@ -27,7 +27,7 @@ function testid(){
         echo "<div class='grid-container'>";
         foreach ($alls as $row) {
             $exerciseName=$row['exercisename'];
-            $image_path = '../images/' . strtolower($exerciseName). '.jpg';
+            $image_path = '../var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
             
             echo '<div class="item">';
             echo '<div class="image">';
@@ -54,7 +54,7 @@ function testid(){
      else {
 
         $work_var = $_GET['id'];
-        $work_qry = "SELECT WorkoutGoalID FROM workout WHERE WorkoutGoalID = $work_var ";
+        $work_qry = "SELECT WorkoutGoalID FROM Workout WHERE WorkoutGoalID = $work_var ";
         $results = $con->query($work_qry);
 
         if ($results) {
@@ -74,7 +74,7 @@ function testid(){
                 echo "<div class='grid-container'>";
                 foreach ($all as $row) {
                     $exerciseName=$row['exercisename'];
-                    $image_path = '../images/' . strtolower($exerciseName). '.jpg';
+                    $image_path = '../var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
                     
                     echo '<div class="item">';
                     echo '<div class="image">';
@@ -102,7 +102,7 @@ function testid(){
 
             foreach ($alls as $row) {
                 $exerciseName=$row['exercisename'];
-                $image_path = '../images/' . strtolower($exerciseName). '.jpg';
+                $image_path = '../var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
                 
                 echo '<div class="item">';
                 echo '<div class="image">';
