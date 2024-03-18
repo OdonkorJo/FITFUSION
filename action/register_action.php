@@ -20,7 +20,7 @@ if(isset($_POST["regform"])){
      
      $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
 
-     $sql_query = "INSERT INTO fituser (fName, lName,dateOfBirth,sex,email,emailPassword,registrationDate) VALUE ('$first_name','$last_name','$dob','$gender','$email','$encrypted_password',Now())";
+     $sql_query = "INSERT INTO fitUser (fName, lName,dateOfBirth,sex,email,emailPassword,registrationDate) VALUE ('$first_name','$last_name','$dob','$gender','$email','$encrypted_password',Now())";
 
      if ($con->query($sql_query) === true) {
          //redirect to login page

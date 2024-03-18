@@ -8,7 +8,7 @@ $name = $_SESSION["user_name"];
 function get_exercise($con)
 {
     $name = $_SESSION["user_name"];
-    $query = "SELECT `exerciseID`, `exercisename` FROM `recommendations` WHERE `exerciseID` IN (SELECT `exerciseID` FROM `userexercises` WHERE `userID` = (SELECT `userID` FROM `fituser` WHERE `fname` = '$name'))";
+    $query = "SELECT `exerciseID`, `exercisename` FROM `recommendations` WHERE `exerciseID` IN (SELECT `exerciseID` FROM `userExercises` WHERE `userID` = (SELECT `userID` FROM `fitUser` WHERE `fname` = '$name'))";
     $result = $con->query($query);
     
     if ($result) {

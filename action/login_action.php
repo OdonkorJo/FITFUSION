@@ -10,7 +10,7 @@ if (!isset($_POST["submit"])) {
     $userpassword = $_POST["password"];
 
     // Use prepared statements to prevent SQL injection
-    $query = "SELECT * FROM fituser WHERE email = ?";
+    $query = "SELECT * FROM fitUser WHERE email = ?";
     $stmt = $con->prepare($query);
     $stmt->bind_param("s", $useremail);
     $stmt->execute();
