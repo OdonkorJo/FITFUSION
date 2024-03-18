@@ -11,7 +11,7 @@ if (!isset($_POST["submit"])){
 
         $userid = $_SESSION["user_name"];
         foreach($_POST['exerise'] as $exerciseID) {
-            $user = "INSERT INTO userexercises (userid, exerciseID, workoutGoalID, userStatus) 
+            $user = "INSERT INTO userExercises (userid, exerciseID, workoutGoalID, userStatus) 
             VALUES ((SELECT `userID` FROM `fituser` WHERE `fName` = '$userid'), 
                     $exerciseID, 
                     (SELECT workoutGoalID FROM recommendations WHERE exerciseID = $exerciseID), 
