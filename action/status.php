@@ -6,7 +6,7 @@ if(!isset($_GET['id'])) {
     exit;
 }else{
     $ret_var= $_GET['id'];
-    $query = "UPDATE `days` SET `status`='Completed' WHERE `exerciseID` = '$ret_var'";
+    $query = "UPDATE `days` SET `exerciseStatus`='Completed' WHERE `exerciseID` = '$ret_var'";
     $result= $con->query($query);
     if ($result){
         header("Location:../view/workout.php");

@@ -17,7 +17,7 @@ include "../functions/get_id_fxn.php";
     <link rel="stylesheet" href="../css/recommendation.css">
 	
     <script src="../js/Homepage.js"></script>
-	<title>Dashboard</title>
+	<title>Recommendation</title>
 </head>
 <body>
 <!-- Sidebar -->

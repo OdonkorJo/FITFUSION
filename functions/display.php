@@ -21,11 +21,11 @@ function display($con)
         foreach ($result as $row) {
             echo "<tr>";
 
-            echo "<td>" . $row['day'] . "</td>";
+            echo "<td>" . $row['_day'] . "</td>";
             echo "<td>" . $row['exercise'] . "</td>";
             echo "<td>
             <a href=\"../action/status.php?id=" . $row['exerciseID'] . "\">
-            <button id='comp' name='status'>".$row['status']."</button>
+            <button id='comp' name='status'>".$row['exerciseStatus']."</button>
             </a>
            
             </td>";

@@ -60,11 +60,11 @@ foreign key (exercisename) references exercises(exerciseName)
 
 create table days (
     user_name varchar(50),
-    day varchar(50),
-    exerciseID primary key auto_increment,
+    _day varchar(50),
+    exerciseID int primary key auto_increment,
     exercise varchar(50),
-    status varchar(50)
-)
+   exerciseStatus varchar(50)
+);
 
 /* Exercise catalog with all the exercises on our website. */
 insert into exercises (exerciseName) values

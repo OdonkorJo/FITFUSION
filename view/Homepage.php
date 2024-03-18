@@ -15,7 +15,7 @@ isLoggedIn();
 	<link rel="stylesheet" href="../css/Homepage.css">
 	
     <script src="../js/Homepage.js"></script>
-	<title>Dashboard</title>
+	<title>Home</title>
 </head>
 <body>
 <!-- creation of the sidebar -->

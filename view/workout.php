@@ -8,7 +8,7 @@ include "../functions/display.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Track workout</title>
     <link href="../css/schedule_workout.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -44,7 +44,7 @@ include "../functions/display.php";
             <li>
                 <a href="../view/workout.php">
                     <i class='bx bxs-calendar-check'></i>
-                    <span class="text">SCHEDULE WORKOUT</span>
+                    <span class="text">TRACK WORKOUT</span>
                 </a>
             </li>
         </ul>
@@ -86,6 +86,11 @@ include "../functions/display.php";
                         <li><i class='bx bx-chevron-right'></i></li>
                         <li>
                             <a class="active" href="../view/Recommendation.php">Recommendations</a>
+                        </li>
+
+                        <li><i class='bx bx-chevron-right'></i></li>
+                        <li>
+                            <a class="active" href="../view/workout.php">Track Workout</a>
                         </li>
                         
                     </ul>

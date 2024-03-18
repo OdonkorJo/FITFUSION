@@ -1,7 +1,7 @@
 <?php
 include "../settings/connection.php";
 include "../settings/core.php";
-include "../js/alert.js";
+
 
 
 if (!isset($_POST["submit"])){

@@ -16,7 +16,7 @@ if(!isset($_POST["submit"])){
 
             // Insert the selected exercises into the database
             foreach ($selectedExercises as $exercise) {
-                $query = "INSERT INTO `days`(`user_name`, `day`, `exerciseID`, `exercise`, `status`) VALUES ('$name', '$day', '','$exercise','incomplete')";
+                $query = "INSERT INTO `days`(`user_name`, `_day`, `exerciseID`, `exercise`, `exerciseStatus`) VALUES ('$name', '$day', '','$exercise','incomplete')";
                 $result = $con->query($query);
                 if ($result){
                     header("Location:../view/workout.php");
