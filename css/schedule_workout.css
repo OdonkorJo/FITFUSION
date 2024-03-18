@@ -52,9 +52,148 @@
     background-color: #FFA500; 
 }
 
-.hide{
+p{
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+/* #schedule{
+    height: 50px;
+    width: 200px;
+	border: transparent 3px;
+	border-radius: 25px;
+	background-color: #F75A1B;
+	color: white;
+	font-size: large;
+    position: absolute;
+    left:100px; 
+} */
+
+#schedule #add{
+    height: 50px;
+    width: 200px;
+	border: transparent 3px;
+	border-radius: 25px;
+	background-color: #F75A1B;
+	color: white;
+	font-size: large;
+    position: absolute;
+    left:1050px; 
+    top:35px;
+  
+}
+
+tr{
+    color:white;
+    font-family: monospace;
+    font-size: large;
+}
+
+form{
+    position: absolute;
+    left: 30%;
+    margin-top: 40px;
+    border: #2e4d5a ;
+    width: 500px;
+    background-color: #2e4d5a;
     display: none;
+    border: white solid 3px;
+    box-shadow: #2e4d5a;
+    border-radius: 10px;
+   
 }
-.drag-over{
-    border:dashed 3px #FFA500;
+.day{
+    display: grid;
+	grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+   
 }
+form h4{
+    color:white;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 7px;
+    
+}
+
+form button{
+	position: absolute;
+    left:40px;
+    height: 40px;
+    width: 150px;
+	border: transparent 3px;
+	border-radius: 25px;
+	background-color: #F75A1B;
+	color: white;
+	font-size: large;
+}
+form label{
+    height: 30px;
+    width:150px;
+    background-color: #F75A1B;
+}
+label span{
+    font-size: large;
+    padding-top: 5px;
+}
+
+#closeFormBtn{
+    width :100px;
+    background: transparent;
+    outline: none;
+    cursor:pointer;
+   
+
+ 
+
+    position: relative;
+    bottom: 33px;
+    left:90px;
+
+
+    height: 40px;
+    width: 150px;
+	border: transparent 3px;
+	border-radius: 25px;
+	background-color: #F75A1B;
+	color: white;
+	font-size: large;
+
+
+}
+
+
+table {
+  
+    position: absolute;
+    left: 250px;
+    top:150px;
+    border-collapse: collapse; 
+    margin-left: 10px;
+    margin-right: px;
+    width: 70%;
+    
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color:#F75A1B;
+    text-align: center;  
+}
+
+
+#comp{
+    height: 50px;
+    width: 100%;
+	border: transparent 0px;
+	border-radius: 0px;
+	 background-color: #F75A1B;
+	color: white;
+	font-size: large;
+   
+  
+} 
