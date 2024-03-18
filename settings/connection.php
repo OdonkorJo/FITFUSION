@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password="cs341webtech";
-$dbname="fitfusion";
+$dbname="FitFusion";
 
 
 //create connection
