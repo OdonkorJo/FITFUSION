@@ -58,6 +58,13 @@ exercisename varchar(100),
 foreign key (exercisename) references exercises(exerciseName)
 );
 
+create table days (
+    user_name varchar(50),
+    day varchar(50),
+    exerciseID primary key auto_increment,
+    exercise varchar(50),
+    status varchar(50)
+)
 
 /* Exercise catalog with all the exercises on our website. */
 insert into exercises (exerciseName) values
@@ -122,6 +129,8 @@ insert into recommendations (workoutGoalID, exerciseID, exercisename) values
 (3, 18, 'Box Jumps'),
 (3, 19, 'Jump Squats'),
 (3, 20, 'Jumping Jacks');
+
+
 
 /* Display Tables */
 
