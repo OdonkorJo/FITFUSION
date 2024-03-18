@@ -36,7 +36,7 @@ function display($con)
 
     } else {
         
-        echo "somethin went wrong.";
+        echo "something went wrong.";
     }
 }
 

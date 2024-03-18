@@ -14,5 +14,5 @@ if(!isset($_GET['id'])) {
         echo"sorry, something went wrong";
     }
     
-}
+} 
 ?>
