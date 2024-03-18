@@ -34,7 +34,7 @@ li {
 	--light-orange: #FFE0D3;
   --lighter:#000000;
   --very-light-black:#666666;
-  ---fave:#2e4d5a;
+  --fave:#2e4d5a;
 
 }
 
@@ -65,7 +65,7 @@ body {
 
 /* for center text */
 #fit{
-	color: var(---fave);
+	color: var(--orange);
 	
 }
 h1{
@@ -117,13 +117,14 @@ h1{
 }
 a.btn{
 	padding:15px 40px;
-	background-color:var(---fave);
-	;
+	background-color:var(--fave);
 	color: #eee;
 	border: none;
 	border: 1px solid #eee;
 	display: inline-block;
 }
+
+
 a.btn:hover{
 	background-color: transparent;
 }
@@ -251,7 +252,7 @@ a.btn:hover{
 
 /* all */
 #Sidebar .side-menu.top li a:hover {
-	color: var(---fave);
+	color: var(--fave);
 }
 
 /* align with FitFusion */
@@ -353,7 +354,7 @@ a.btn:hover{
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 280px; /* Initial width */
+	width: 280px; 
 	height: 100%;
 	background: var(--light);
 	z-index: 2000;
@@ -363,12 +364,12 @@ a.btn:hover{
 	scrollbar-width: none;
 }
 
-/* Hover effect for expanding sidebar */
+
 #Sidebar:hover {
-	width: 280px; /* Sidebar width on hover */
+	width: 280px; 
 }
 
-/* Smaller sidebar width when not hovered over */
+
 #Sidebar.hide {
 	width: 60px;
 }
@@ -388,5 +389,113 @@ a.btn:hover{
 }
 
 
+@media (max-width: 768px) {
+    .name h3 {
+        margin-left: 0;
+        font-size: 60px;
+    }
+
+    .home-text {
+        padding-top: 20%;
+        padding-right: 30px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+
+/* For screens between 768px and 1200px (small to medium screens) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .name h3 {
+        font-size: 80px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+}
+
+/* For screens larger than 1200px (large screens) */
+@media (min-width: 1200px) {
+    .name h3 {
+        font-size: 100px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+}
 
 
+
+
+
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-buttons-container {
+    text-align: center;
+    margin-top: 20px;
+	
+}
+
+.sub-heading {
+    font-size: 30px;
+    text-align: center;
+	color:cornsilk;
+}
+
+.auth-buttons .btn {
+    padding: 20px 60px;
+    border-radius: 30px;
+    font-size: 20px; 
+}
+
+.auth-buttons .btn:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
+}
+
+.additional-text-container {
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.additional-text {
+    font-size: 28px; 
+    color: white; 
+	font-family: monospace;
+}
+
+.auth-buttons {
+    text-align: center; /* Center-align the buttons */
+    margin-top: 20px; /* Add some top margin */
+}
+
+.auth-buttons .btn {
+    padding: 15px 40px; /* Adjust button padding */
+    border-radius: 30px; /* Increase the border-radius for more rounded ends */
+    font-size: 20px; /* Increase the font size */
+}
+
+.auth-buttons .btn:hover {
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
+}
+
+.About {
+	font-size: 30px;
+	font-family: monospace;
+	color: #FD7238;
+}

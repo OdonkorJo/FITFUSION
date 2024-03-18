@@ -11,7 +11,6 @@ include "../functions/get_id_fxn.php";
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- using boxicon (for external icons) -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -21,7 +20,7 @@ include "../functions/get_id_fxn.php";
 	<title>Dashboard</title>
 </head>
 <body>
-<!-- creation of the sidebar -->
+<!-- Sidebar -->
 	<section id="Sidebar">
 		<a href="#" class="collection">
 			<i class='bx bx-dumbbell'></i>
@@ -49,60 +48,40 @@ include "../functions/get_id_fxn.php";
 			<li>
 				<a href="../view/workout.php">
 					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">SCHEDULE WORKOUT</span>
+					<span class="text">TRACK WORKOUT</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-edit' ></i>
-					<span class="text">TRACKER</span>
-				</a>
-			</li>
+			
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="../login/login.php" class="logout">
+				<a href="LandingPage.php" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">LOGOUT</span>
 				</a>
 			</li>
 		</ul>
 	</section>
-	<!-- END OF THE SIDEBAR -->
-    <!-- CODE WORKS UP TO HERE! -->
 
 
 
 
-<!-- CONTENT -->
+
 <section id="content">
-	<!-- NAVBAR -->
-	<!-- <nav></nav> -->
-
+	
 <!-- MAIN -->
 		<main>
 			<div class="head-title">
 				<div class="left">
 					
 					<ul class="breadcrumb">
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
+						<li><a href="#">Dashboard</a></li>
 						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="../view/Homepage.php">Home</a>
-						</li>
-
+						<li><a class="active" href="../view/Homepage.php">Home</a></li>
 						<li><i class='bx bx-chevron-right' ></i></li>
-
-						<li>
-							<a class="active" href="../view/set_goals.php">Set Goals</a>
-						</li>
-
+						<li><a class="active" href="../view/set_goals.php">Set Goals</a></li>
 						<li><i class='bx bx-chevron-right'></i></li>
-						<li>
-							<a class="active" href="../view/Recommendation.php">Recommendations</a>
-						</li>
+						<li><a class="active" href="../view/Recommendation.php">Recommendations</a></li>
 					</ul>
 					
 				</div>

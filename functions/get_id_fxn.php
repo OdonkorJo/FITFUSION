@@ -70,7 +70,7 @@ function testid(){
             if ($result) {
                 $all = $result->fetch_all(MYSQLI_ASSOC);
                 echo "<form action = \"../action/recommendation_action.php\" method ='post'>";
-                echo "<h3> Recommended exercise</h3>";
+                echo "<h3 style='font-family:monospace; color:white; font-size:30px;'> Recommended Exercises</h3>";
                 echo "<div class='grid-container'>";
                 foreach ($all as $row) {
                     $exerciseName=$row['exercisename'];
@@ -94,7 +94,7 @@ function testid(){
 
 
             echo "<br><br><br><br>";
-            echo "<h3>All exercise</h3>";
+            echo "<h3 style='font-family:monospace; color:white; font-size:30px;'>All Exercises</h3>";
             echo "<div class='grid-container'>";
             
             $alls = getallrecommendations($con);

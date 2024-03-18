@@ -24,7 +24,7 @@ if(isset($_POST["regform"])){
 
      if ($con->query($sql_query) === true) {
          //redirect to login page
-         echo "Success!";
+        
          header("Location:../login/login.php");
 
     } 
@@ -38,14 +38,6 @@ if(isset($_POST["regform"])){
     $con->close();
 
 }
-
-
-
-
-
-
-
-
 ?>
 
 

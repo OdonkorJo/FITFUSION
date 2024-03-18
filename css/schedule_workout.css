@@ -1,4 +1,4 @@
-/* Calendar styles */
+
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -49,7 +49,7 @@
 }
 
 .exercise:hover {
-    background-color: #FFA500; /* Orange on hover */
+    background-color: #FFA500; 
 }
 
 .hide{

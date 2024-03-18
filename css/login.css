@@ -1,5 +1,7 @@
+/* Base styles */
+
 body {
-    font-family:monospace;
+    font-family: monospace;
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
@@ -41,16 +43,17 @@ button {
 }
 
 button {
-    background-color:#2e4d5a;
+    background-color: #2e4d5a;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 400px;
 }
 
 button:hover {
-    background-color:#2e4d5a;
+    background-color: #2e4d5a;
 }
 
 .register-link {
@@ -65,4 +68,22 @@ button:hover {
 
 .register-link a:hover {
     text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    button {
+        width: 100%;
+    }
 }

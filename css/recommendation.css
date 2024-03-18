@@ -37,7 +37,10 @@ li {
   ---fave:#2e4d5a;
 
 }
+h3{
+	font-family: monospace;
 
+}
 html {
 	overflow-x: hidden;
 }
@@ -327,7 +330,7 @@ a.btn:hover{
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 280px; /* Initial width */
+	width: 280px; 
 	height: 100%;
 	background: var(--light);
 	z-index: 2000;
@@ -339,7 +342,7 @@ a.btn:hover{
 
 /* Hover effect for expanding sidebar */
 #Sidebar:hover {
-	width: 280px; /* Sidebar width on hover */
+	width: 280px; 
 }
 
 /* Smaller sidebar width when not hovered over */
@@ -389,6 +392,7 @@ body {
     line-height: 3.0em;
     width: 8.0em;
     height: 3.0em;
+	
   }
   
   .cat label span {
@@ -396,6 +400,9 @@ body {
     padding: 3px 0;
     display: block;
     color: #fff;
+  }
+  .cat label :hover  {
+	background-color: #F75A1B;
   }
   
   .cat label input {
@@ -406,8 +413,9 @@ body {
   .cat label input:checked + span {
     color: #ffffff;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-    background-color: #F75A1B; /* Change background color for selected checkbox */
+    background-color: #F75A1B; 
   }
+
   
   button{
 	
@@ -442,7 +450,7 @@ body {
 
 .image {
     width: 100%;
-    height: 200px; /* Adjust height as needed */
+    height: 200px; 
 	overflow: hidden;
     border-radius: 15px;
 }
@@ -450,7 +458,7 @@ body {
 .image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
 .exercise{
@@ -459,4 +467,31 @@ body {
 }
 .exercise button{
 	margin-left: 20px;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 576px) {
+    #Sidebar {
+        width: 100px;
+    }
+
+
+    #content {
+        width: calc(100% - 100px);
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+   
+    #Sidebar {
+        display: none; 
+    }
+
+   
+    #content {
+        width: 100%;
+        left: 0;
+    }
 }

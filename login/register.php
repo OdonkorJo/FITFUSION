@@ -33,12 +33,13 @@
                 <input type="date" id="dob" name="dob" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="select-design"> 
                 <label for="sex">Sex:</label>
                 <select id="sex" name="sex" required>
+                    <option value="Select">Select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
-                    <option value="other">Other</option>
+                    <!--<option value="other">Other</option>--> <!-- I removed this option because there are only two genders -->
                 </select>
             </div>
 

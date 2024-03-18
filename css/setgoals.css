@@ -47,8 +47,6 @@ body.dark{
 }
 body {
     background-image: url('../images/trainer1.jpg');
-	/* width: 100%;
-	height: 600px; */
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
@@ -213,7 +211,6 @@ h2{
 	width: 100%;
 	padding: 36px 24px;
 	font-family: monospace;
-	/* max-height: calc(100vh - 56px); */
 	overflow-y: auto;
 }
 #content main .head-title {
@@ -235,7 +232,7 @@ h2{
 	grid-gap: 16px;
 }
 #content main .head-title .left .breadcrumb li {
-	color: var(--dark);
+	color: var(--light);
 }
 #content main .head-title .left .breadcrumb li a {
 	color: var(--light);
@@ -245,8 +242,6 @@ h2{
 	color: var(--light);
 	pointer-events: unset;
 }
-
-/* for stats boxes */
 
 #content main .box-info {
 	display: grid;
@@ -259,7 +254,6 @@ h2{
 	background: var(--light);
 	border-radius: 20px;
 	display: flex;
-	/* align-items: center; */
 	grid-gap: 24px;
 	width: 200px;
 	height: 150px;
@@ -271,64 +265,48 @@ h2{
 
 #content main .box-info li .text h3 {
 	font-size: 15px;
-	/* font-weight:100; */
 	color: var(--lighter);
 	margin-left: 20px;
-	/* text-decoration: solid; */
 	padding-right: 20px;	
 	padding-top: 40px;
 }
 	
 
 
-  /* Start of Sidebar CSS */
+  /* SIDEBAR */
 #Sidebar {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 280px; /* Initial width */
+	width: 280px; 
 	height: 100%;
 	background: var(--light);
 	z-index: 2000;
 	font-family: monospace;
-	transition: width 0.3s ease; /* Add transition for smooth animation */
+	transition: width 0.3s ease; 
 	overflow-x: hidden;
 	scrollbar-width: none;
 }
 
-/* Hover effect for expanding sidebar */
 #Sidebar:hover {
-	width: 280px; /* Sidebar width on hover */
+	width: 280px; 
 }
 
-/* Smaller sidebar width when not hovered over */
 #Sidebar.hide {
 	width: 60px;
 }
 
 /* Homepage.css */
-
-/* Add this CSS for the hover effect */
 .box-info li:hover {
-    transform: scale(1.05); /* Slightly enlarge the element on hover */
-    transition: transform 0.3s ease; /* Add smooth transition effect */
+    transform: scale(1.05);
+    transition: transform 0.3s ease; 
 }
 
-/* Add this CSS for the hover effect */
 .goal-button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-    transition: transform 0.3s ease; /* Add smooth transition effect */
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
 }
 
-/* Your existing CSS styles */
-/* ... */
-
-/* Additional styles for the set_goals page */
-
-/* Your existing styles */
-/* ... */
-
-/* Additional styles for the set_goals page */
 
 .set-goals-page {
     display: flex;
@@ -361,6 +339,49 @@ h2{
 .goal-button:hover {
     background-color: var(--dark-blue);
 }
+
+@media only screen and (max-width: 768px) {
+	#Sidebar {
+	  width: 200px;
+	}
+  }
+  
+ 
+  @media only screen and (max-width: 480px) {
+	#Sidebar {
+	  width: 100px;
+	}
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+	#content {
+	  width: calc(100% - 200px);
+	  left: 200px;
+	}
+  }
+  
+  
+  @media only screen and (max-width: 480px) {
+	#content {
+	  width: calc(100% - 100px);
+	  left: 100px;
+	}
+  }
+  
+  /* for smaller screens */
+  @media only screen and (max-width: 768px) {
+	h2 {
+	  font-size: 40px;
+	}
+  }
+  /* for phones */
+  @media only screen and (max-width: 480px) {
+	h2 {
+	  font-size: 30px;
+	}
+  }
+  
 
 
 
