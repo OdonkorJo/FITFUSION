@@ -27,7 +27,7 @@ function testid(){
         echo "<div class='grid-container'>";
         foreach ($alls as $row) {
             $exerciseName=$row['exercisename'];
-            $image_path = '../var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
+            $image_path = '../ubuntu@18.133.105.236/var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
             
             echo '<div class="item">';
             echo '<div class="image">';
@@ -74,7 +74,7 @@ function testid(){
                 echo "<div class='grid-container'>";
                 foreach ($all as $row) {
                     $exerciseName=$row['exercisename'];
-                    $image_path = '../var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
+                    $image_path = '../ubuntu@18.133.105.236/var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
                     
                     echo '<div class="item">';
                     echo '<div class="image">';
@@ -102,7 +102,7 @@ function testid(){
 
             foreach ($alls as $row) {
                 $exerciseName=$row['exercisename'];
-                $image_path = '../var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
+                $image_path = '../ubuntu@18.133.105.236/var/www/FITFUSION/images/' . strtolower($exerciseName). '.jpg';
                 
                 echo '<div class="item">';
                 echo '<div class="image">';
