@@ -47,12 +47,6 @@ include "../functions/display.php";
                     <span class="text">SCHEDULE WORKOUT</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-edit'></i>
-                    <span class="text">TRACKER</span>
-                </a>
-            </li>
         </ul>
         <ul class="side-menu">
             <li>
